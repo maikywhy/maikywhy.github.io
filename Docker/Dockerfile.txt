@@ -1,0 +1,8 @@
+# Використовуємо офіційний образ Apache
+FROM httpd:2.4
+
+# Копіюємо вміст папки public до директорії /usr/local/apache2/htdocs/, звідки Apache обслуговує файли
+COPY ./public/ /usr/local/apache2/htdocs/
+
+# Відкриваємо порт 80 для доступу до сервера
+EXPOSE 80
